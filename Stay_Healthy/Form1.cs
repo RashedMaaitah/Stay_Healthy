@@ -24,14 +24,14 @@ public partial class Form1 : Form
     private void OnTimedEvent(Object source, ElapsedEventArgs e)
     {
         ShowToastNotification();
-        PlayCustomAudio();
+        //PlayCustomAudio();
     }
     private static void ShowToastNotification()
     {
         // Audio
         ToastAudio audio = new()
         {
-            Silent = true,
+            Src = new Uri("ms-winsoundevent:Notification.Reminder")
         };
 
         // Inline Image
